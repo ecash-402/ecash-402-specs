@@ -10,12 +10,9 @@ The Smart Client and Provider/Server architecture creates an intelligent ecosyst
 
 ```mermaid
 graph TB
-    subgraph "Provider Discovery Layer"
+    subgraph "Smart Client Layer"
         NR[Nostr Relays]
         PD[Provider Discovery]
-    end
-
-    subgraph "Smart Client Layer"
         SC[Smart Client]
         CPM[Client Payment Manager]
         CM[Cost Monitor]
@@ -35,19 +32,17 @@ graph TB
     TM --> CR
     CR --> PS
 
-    SC --> PD
     SC --> CPM
     SC --> CM
     PS --> SC
 
-    PS --> PP
+    SC --> PP
     PP --> PPM
-    PM --> PE
+    PPM --> PE
 
     style SC fill:#e1f5fe
     style PD fill:#f3e5f5
-    style PP fill:#f3e5f5
-    style PM fill:#f3e5f5
+    style PP fill:#e1f5fe
 ```
 
 ## Architecture Components
