@@ -1,4 +1,4 @@
-# Smart Client and Dynamic Server Architecture
+# Smart Client and Provider Architecture
 
 ## Overview
 
